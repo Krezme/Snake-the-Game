@@ -29,21 +29,21 @@ public class SnakeController : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && currentDirection != "Down" && isDiractionChanged == false && currentDirection != "Up") {
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && currentDirection != "Down" && isDiractionChanged == false && currentDirection != "Up") {
             currentDirection = "Up";
             isDiractionChanged = true;
         }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow) && currentDirection != "Up" && isDiractionChanged == false && currentDirection != "Down")
+        else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && currentDirection != "Up" && isDiractionChanged == false && currentDirection != "Down")
         {
             currentDirection = "Down";
             isDiractionChanged = true;
         } 
-        else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow) && currentDirection != "Right" && isDiractionChanged == false && currentDirection != "Left")
+        else if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && currentDirection != "Right" && isDiractionChanged == false && currentDirection != "Left")
         {
             currentDirection = "Left";
             isDiractionChanged = true;
         }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) && currentDirection != "Left" && isDiractionChanged == false && currentDirection != "Right")
+        else if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && currentDirection != "Left" && isDiractionChanged == false && currentDirection != "Right")
         {
             currentDirection = "Right";
             isDiractionChanged = true;

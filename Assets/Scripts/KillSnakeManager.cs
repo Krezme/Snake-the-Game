@@ -18,5 +18,9 @@ public class KillSnakeManager : MonoBehaviour {
             snakeController.enabled = false;
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.tag == "Border") {
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Body
   - Food
   - GameManager
+  - Border
   layers:
   - Default
   - TransparentFX
