@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50445252662801580}
   - component: {fileID: 114024186734851462}
   - component: {fileID: 114403676486995746}
+  - component: {fileID: 114956809795296994}
   m_Layer: 0
   m_Name: Head
   m_TagString: Head
@@ -115,7 +116,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0893de66b552c0e4db4d7961e4bd83dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howManyBodyPartsToAdd: 1
   foodPrefab: {fileID: 1937383006774434, guid: ccef3baf40dd8d646865b23dd83e40b4, type: 2}
+--- !u!114 &114956809795296994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1284335205873444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ecc4329863ba64d9aac8da14c29e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212617820069305654
 SpriteRenderer:
   m_ObjectHideFlags: 1

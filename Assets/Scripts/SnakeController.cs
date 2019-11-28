@@ -18,6 +18,7 @@ public class SnakeController : MonoBehaviour {
     private bool isDiractionChanged = false;
     public List<Vector2> snakeMoveLocation = new List<Vector2>();
     public int snakeLenght = 2;
+    public bool isSnakeAlive = true;
 
 
     void Start() {
@@ -81,6 +82,8 @@ public class SnakeController : MonoBehaviour {
             body.transform.position = new Vector3(snakeMoveLocation[i].x, snakeMoveLocation[i].y, -1);
         }
         yield return new WaitForSecondsRealtime(waitForSeconds);
-        StartCoroutine(WaitForSeconds());
+        if (isSnakeAlive == true) {
+            StartCoroutine(WaitForSeconds()); 
+        }
     }
 }

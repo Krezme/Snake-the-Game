@@ -8,6 +8,8 @@ public class FoodController : MonoBehaviour {
 
     private int score;
 
+    public int howManyBodyPartsToAdd;
+
     private Vector3 foodSpawnPoint;
 
     public GameObject foodPrefab;
@@ -25,7 +27,7 @@ public class FoodController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Food") { 
             Destroy(other.gameObject);
-            snakeController.snakeLenght += 20;
+            snakeController.snakeLenght += howManyBodyPartsToAdd;
             score += 10;
             FoodSpawner();
         }
