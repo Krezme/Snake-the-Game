@@ -16,7 +16,7 @@ public class KillSnakeManager : MonoBehaviour {
         if (other.gameObject.tag == "Body") {
             snakeController.isSnakeAlive = false;
             snakeController.enabled = false;
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 }

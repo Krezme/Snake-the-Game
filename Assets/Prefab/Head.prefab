@@ -77,10 +77,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.25, y: 0.25}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
@@ -105,6 +105,7 @@ MonoBehaviour:
   bodyPrefab: {fileID: 1337540671585514, guid: 4ee55a2e371b00a469e9b8c1f792d894, type: 2}
   snakeMoveLocation: []
   snakeLenght: 2
+  isSnakeAlive: 1
 --- !u!114 &114403676486995746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,7 +165,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ebb32da14a2a9147862a5b33c878494, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e30b7e5e6fb4a994f89fa38d51d64ef2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
