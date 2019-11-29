@@ -1,25 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FoodController : MonoBehaviour {
 
-    private SnakeController snakeController;
+    public int howManyBodyPartsToAdd;
 
     private int score;
 
-    public int howManyBodyPartsToAdd;
+    public GameObject foodPrefab;
+
+    private GameObject food;
+
+    private SnakeController snakeController;
 
     private Vector3 foodSpawnPoint;
 
-    public GameObject foodPrefab;
-    private GameObject food;
     private bool isThereABodyPart;
+
+    public Text scoreText;
 
     private float[] xPositions = new float[36] {0, 0.5f, 1, 1.5f, 2, 2.5f, 3, 3.5f, 4, 4.5f, 5, 5.5f, 6, 6.5f, 7, 7.5f, 8, 8.5f, 9, 9.5f, 10, 10.5f, 11, 11.5f, 12, 12.5f, 13, 13.5f, 14, 14.5f, 15, 15.5f, 16, 16.5f, 17, 17.5f};
     private float[] yPositions = new float[20] {0, 0.5f, 1, 1.5f, 2, 2.5f, 3, 3.5f, 4, 4.5f, 5, 5.5f, 6, 6.5f, 7, 7.5f, 8, 8.5f, 9, 9.5f};
 
     void Start() {
+        scoreText = GameObject.FindGameObjectWithTag("ScoreDisplay").GetComponent<Text>();
         snakeController = GameObject.FindGameObjectWithTag("Head").GetComponent<SnakeController>();
         
     }
@@ -29,6 +35,7 @@ public class FoodController : MonoBehaviour {
             Destroy(other.gameObject);
             snakeController.snakeLenght += howManyBodyPartsToAdd;
             score += 10;
+            scoreText.text = score.ToString();
             FoodSpawner();
         }
     }

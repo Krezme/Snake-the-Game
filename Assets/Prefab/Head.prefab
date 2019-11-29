@@ -119,6 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   howManyBodyPartsToAdd: 1
   foodPrefab: {fileID: 1937383006774434, guid: ccef3baf40dd8d646865b23dd83e40b4, type: 2}
+  scoreText: {fileID: 114285291509992374, guid: c955f7e677e51c646bc9a0101f5ef293,
+    type: 2}
 --- !u!114 &114956809795296994
 MonoBehaviour:
   m_ObjectHideFlags: 1
