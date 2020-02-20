@@ -11,6 +11,8 @@ TagManager:
   - GameManager
   - Border
   - ScoreDisplay
+  - Game Over Text
+  - Score
   layers:
   - Default
   - TransparentFX

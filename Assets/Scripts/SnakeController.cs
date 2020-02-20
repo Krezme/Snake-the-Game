@@ -19,6 +19,7 @@ public class SnakeController : MonoBehaviour {
     public List<Vector2> snakeMoveLocation = new List<Vector2>();
     public int snakeLenght = 2;
     public bool isSnakeAlive = true;
+    [HideInInspector] public bool borderlessGameMode;
 
 
     void Start() {
@@ -55,23 +56,51 @@ public class SnakeController : MonoBehaviour {
         snakeMoveLocation.Insert(0, transform.position);
         if (currentDirection == "Right")
         {
-            transform.position = new Vector3(transform.position.x + xMovement, transform.position.y, -1);
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            if (this.gameObject.transform.position.x == 17.5f && borderlessGameMode == true)
+            {
+                transform.position = new Vector3(0, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x + xMovement, transform.position.y, -1);
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
         }
         else if (currentDirection == "Left")
         {
-            transform.position = new Vector3(transform.position.x - xMovement, transform.position.y, -1);
-            transform.eulerAngles = new Vector3(0, 0, 180);
+            if (this.gameObject.transform.position.x == 0 && borderlessGameMode == true)
+            {
+                transform.position = new Vector3(17.5f, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x - xMovement, transform.position.y, -1);
+                transform.eulerAngles = new Vector3(0, 0, 180);
+            }
         }
         else if (currentDirection == "Up")
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y + yMovement, -1);
-            transform.eulerAngles = new Vector3(0, 0, 90);
+            if (this.gameObject.transform.position.y == 9.5f && borderlessGameMode == true)
+            {
+                transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + yMovement, -1);
+                transform.eulerAngles = new Vector3(0, 0, 90);
+            }
         }
         else if (currentDirection == "Down")
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y - yMovement, -1);
-            transform.eulerAngles = new Vector3(0, 0, 270);
+            if (this.gameObject.transform.position.y == 0 && borderlessGameMode == true)
+            {
+                transform.position = new Vector3(transform.position.x, 9.5f, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y - yMovement, -1);
+                transform.eulerAngles = new Vector3(0, 0, 270);
+            }
         }
         if (isSnakeAlive == true) {
             foreach (GameObject gO in GameObject.FindGameObjectsWithTag("Body"))
