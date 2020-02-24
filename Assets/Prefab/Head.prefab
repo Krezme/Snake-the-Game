@@ -102,7 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitForSeconds: 0.1
-  bodyPrefab: {fileID: 1337540671585514, guid: 4ee55a2e371b00a469e9b8c1f792d894, type: 2}
   snakeMoveLocation: []
   snakeLenght: 2
   isSnakeAlive: 1

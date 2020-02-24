@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\KillSnakeManager.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\SnakeController.cs" />
+     <Compile Include="Assets\Scripts\SnakePrefabController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/Проекти/Unity/Snake-the-Game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

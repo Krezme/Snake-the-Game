@@ -13,6 +13,7 @@ TagManager:
   - ScoreDisplay
   - Game Over Text
   - Score
+  - SnakeBodyManager
   layers:
   - Default
   - TransparentFX

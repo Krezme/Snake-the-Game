@@ -7,7 +7,7 @@ public class SnakeController : MonoBehaviour {
     
     public float waitForSeconds;
 
-    public GameObject bodyPrefab;
+    private GameObject bodyPrefab;
     private GameObject body;
 
     private GameObject snake;
@@ -23,6 +23,7 @@ public class SnakeController : MonoBehaviour {
 
 
     void Start() {
+        bodyPrefab = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().bodyPrefab;
         snake = GameObject.FindGameObjectWithTag("Snake");
         snakeMoveLocation.Insert(0, new Vector3(3, 5, 0));
         snakeMoveLocation.Insert(0, new Vector3(3.5f, 5, 0));

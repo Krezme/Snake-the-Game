@@ -15,14 +15,22 @@ public class GameManager : MonoBehaviour {
     private SnakeController snakeController;
     public bool borderlessGameMode;
 
+    private SnakePrefabController sPC;
+
 	void Awake () {
+        sPC = GameObject.FindGameObjectWithTag("SnakeBodyManager").GetComponent<SnakePrefabController>();
+        
+
+        
+    }
+
+    void Start() {
+        headPrefab = sPC.snakeSpritesHead[sPC.choosenSnake];
+        bodyPrefab = sPC.snakeSpritesBody[sPC.choosenSnake];
         snake = Instantiate(snakePrefab);
         head = Instantiate(headPrefab);
         head.transform.SetParent(snake.transform);
         head.transform.position = startPos;
-    }
-
-    void Start() {
         snakeController = GameObject.FindGameObjectWithTag("Head").GetComponent<SnakeController>();
         snakeController.borderlessGameMode = borderlessGameMode;
     }

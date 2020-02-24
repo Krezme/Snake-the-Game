@@ -6,4 +6,12 @@ public class LevelManager : MonoBehaviour {
     public void LoadGameInfinity() {
         Application.LoadLevel("Game");
     }
+
+    public void LoadSnakeLibrary() {
+        Application.LoadLevel("SnakeLibrary");
+    }
+
+    public void LoadMenu() {
+        Application.LoadLevel("Menu");
+    }
 }
